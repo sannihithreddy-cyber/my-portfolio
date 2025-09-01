@@ -1,0 +1,84 @@
+{
+  "name": "Banala Sannihith",
+  "brandName": "Sannihith Portfolio",
+  "role": "Data Analyst",
+  "siteName": "sannihith.dev",
+  "siteUrl": "",
+  "about": {
+    "title": "Data Analyst | ML & BI Enthusiast",
+    "paragraphs": [
+      "EDA, descriptive analytics, data cleaning, preprocessing, and visualization with a strong foundation in statistics.",
+      "Hands-on with Python (NumPy, Pandas, Scikit‑learn, Matplotlib, Seaborn, Plotly, Yellowbrick), SQL, and BI tools including Power BI and Excel."
+    ],
+    "resumeUrl": "/resume.pdf"
+  },
+  "location": "Waterloo, Canada",
+  "email": "sannihithreddy2002@gmail.com",
+  "phone": "+1 437 779 8235",
+  "socials": {
+    "github": "",
+    "linkedin": "https://www.linkedin.com/in/banalasannihith/",
+    "twitter": "",
+    "instagram": "",
+    "twitch": "",
+    "website": ""
+  },
+  "skills": [
+    { "name": "Python", "level": 90, "category": "data" },
+    { "name": "SQL", "level": 85, "category": "data" },
+    { "name": "Statistics (Descriptive & Inferential)", "level": 80, "category": "data" },
+    { "name": "NumPy", "level": 85, "category": "ml" },
+    { "name": "Pandas", "level": 90, "category": "ml" },
+    { "name": "Scikit-learn", "level": 80, "category": "ml" },
+    { "name": "Matplotlib", "level": 85, "category": "ml" },
+    { "name": "Seaborn", "level": 85, "category": "ml" },
+    { "name": "Plotly", "level": 75, "category": "ml" },
+    { "name": "Yellowbrick", "level": 70, "category": "ml" },
+    { "name": "Power BI", "level": 85, "category": "bi" },
+    { "name": "MS Excel", "level": 90, "category": "bi" },
+    { "name": "MS PowerPoint", "level": 80, "category": "bi" },
+    { "name": "HTML", "level": 70, "category": "web" },
+    { "name": "JavaScript", "level": 65, "category": "web" },
+    { "name": "Communication", "level": 85, "category": "soft" },
+    { "name": "Business Acumen", "level": 80, "category": "soft" },
+    { "name": "Critical Thinking", "level": 85, "category": "soft" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Customer Analysis & Recommendation System",
+      "description": "Transformed UK retail transaction data into customer-centric views; performed segmentation with K‑Means and built recommendations for cross‑sell of unpurchased items.",
+      "image": "/projects/project1.png",
+      "tags": ["Python", "Pandas", "K‑Means", "Recommendation"],
+      "demoUrl": "#",
+      "githubUrl": "#"
+    },
+    {
+      "id": 2,
+      "title": "Iris Recognition (Daugman’s Algorithm + ANN)",
+      "description": "Implemented iris recognition pipeline, feature extraction, and hyperparameter tuning to improve accuracy; experimented with ANN models.",
+      "image": "/projects/project2.png",
+      "tags": ["Python", "Image Processing", "ANN"],
+      "demoUrl": "#",
+      "githubUrl": "#"
+    },
+    {
+      "id": 3,
+      "title": "Android Malware Detection (ML)",
+      "description": "Built models (SVM, Neural Network) to classify Android malware; compared grid search vs. random search for hyperparameter optimization.",
+      "image": "/projects/project3.png",
+      "tags": ["Python", "Scikit‑learn", "SVM", "Neural Network"],
+      "demoUrl": "#",
+      "githubUrl": "#"
+    },
+    {
+      "id": 4,
+      "title": "DHRITI – Capstone Website (Group‑9)",
+      "description": "Implemented Notifications model/API (mark‑as‑read workflow), responsive navbar and layouts, and front‑end validations. Stack: React + Bootstrap, Node API.",
+      "image": "/projects/project3.png",
+      "tags": ["React", "Bootstrap", "Node", "Notifications", "Validation"],
+      "demoUrl": "#",
+      "githubUrl": "#"
+    }
+  ]
+}
