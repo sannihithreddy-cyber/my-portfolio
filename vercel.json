@@ -1,0 +1,8 @@
+{
+"rewrites": [
+{
+"source": "/api/(.*)",
+"destination": "https://my-portfolio-xk59.onrender.com/api/$1"
+}
+]
+}
