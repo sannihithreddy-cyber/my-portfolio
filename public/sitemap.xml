@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://my-portfolio-ruddy-nine-88.vercel.app/</loc></url>
-  <url><loc>https://my-portfolio-ruddy-nine-88.vercel.app/#about</loc></url>
-  <url><loc>https://my-portfolio-ruddy-nine-88.vercel.app/#skills</loc></url>
-  <url><loc>https://my-portfolio-ruddy-nine-88.vercel.app/#projects</loc></url>
-  <url><loc>https://my-portfolio-ruddy-nine-88.vercel.app/#contact</loc></url>
+  <!-- SPA: only list real routes (no # fragments) -->
+  <url>
+    <loc>https://my-portfolio-ruddy-nine-88.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://my-portfolio-ruddy-nine-88.vercel.app/upload.html</loc>
+  </url>
 </urlset>
-
