@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://my-portfolio-ruddy-nine-88.vercel.app/sitemap.xml
+

@@ -10,7 +10,9 @@ export function ProfileProvider({ children }) {
     let ignore = false
     async function load() {
       try {
-        const res = await fetch('/api/profile')
+        const base = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || ''
+        const url = `${base}/api/profile`
+        const res = await fetch(url)
         if (res.ok) {
           const remote = await res.json()
           if (!ignore && remote) setData(remote)
@@ -29,4 +31,3 @@ export function ProfileProvider({ children }) {
 export function useProfile() {
   return useContext(ProfileCtx)
 }
-

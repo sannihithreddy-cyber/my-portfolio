@@ -34,7 +34,9 @@ export default function AboutSection() {
               <a href="#contact" className="cosmic-button">Get in touch</a>
               {(() => {
                 const configured = profile?.about?.resumeUrl
-                const href = configured && configured !== '#' ? configured : '/api/resume'
+                const apiBase = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || ''
+                const fallback = `${apiBase}/api/resume`
+                const href = configured && configured !== '#' ? configured : fallback
                 return (
                   <a
                     href={href}
