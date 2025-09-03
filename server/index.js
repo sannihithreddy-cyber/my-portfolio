@@ -56,6 +56,17 @@ const PortfolioSchema = new mongoose.Schema(
         githubUrl: String,
       },
     ],
+    certifications: [
+      {
+        id: Number,
+        title: String,
+        issuer: String,
+        issueDate: String, // ISO date string
+        credentialId: String,
+        credentialUrl: String,
+        badgeImage: String,
+      },
+    ],
   },
   { timestamps: true }
 )
@@ -78,7 +89,8 @@ app.get('/api/profile', async (req, res) => {
   try {
     const ok = await ensureMongo()
     if (!ok) return res.status(204).end()
-    const doc = await Portfolio.findOne({}).sort({ updatedAt: -1 }).lean()
+    // Return the most recently updated document (tie-breaker by _id)
+    const doc = await Portfolio.findOne({}).sort({ updatedAt: -1, _id: -1 }).lean()
     if (!doc) return res.status(204).end()
     res.json(doc)
   } catch (err) {

@@ -3,7 +3,7 @@ import { useProfile } from '@/data/ProfileContext.jsx'
 
 function Feature({ icon, title, children }) {
   return (
-    <div className="gradient-border p-6 card-hover">
+    <div className="gradient-border p-6 hover-lift reveal">
       <div className="flex items-start gap-4">
         <div className="p-3 rounded-full bg-[hsl(var(--primary)/0.1)] text-primary">
           {icon}
@@ -22,13 +22,15 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">About <span className="text-primary">Me</span></h2>
+        <h2 className="reveal text-3xl md:text-4xl font-bold mb-12 text-center">About <span className="text-primary">Me</span></h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">{profile.about?.title || 'About me'}</h3>
+            {profile.about?.title ? (
+              <h3 className="reveal text-2xl font-semibold">{profile.about.title}</h3>
+            ) : null}
             {(profile.about?.paragraphs || []).map((p, i) => (
-              <p key={i} className="text-muted-foreground">{p}</p>
+              <p key={i} className="reveal text-muted-foreground">{p}</p>
             ))}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">Get in touch</a>
@@ -52,11 +54,13 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <Feature title="Web Development" icon={<Code className="h-6 w-6" />}>Creating responsive, accessible web applications with modern frameworks.</Feature>
-            <Feature title="UI/UX Design" icon={<Palette className="h-6 w-6" />}>Designing intuitive interfaces and seamless user experiences.</Feature>
-            <Feature title="Leadership & Ownership" icon={<Briefcase className="h-6 w-6" />}>Leading projects end-to-end with a focus on quality and impact.</Feature>
-          </div>
+          {Array.isArray(profile.about?.features) && profile.about.features.length ? (
+            <div className="grid grid-cols-1 gap-6">
+              {profile.about.features.map((f, i) => (
+                <Feature key={i} title={f.title} icon={<Code className="h-6 w-6" />}>{f.text}</Feature>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

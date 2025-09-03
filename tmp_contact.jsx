@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Twitch, Send } from 
 import { useProfile } from '@/data/ProfileContext.jsx'
 
 export default function ContactSection() {
-  const profile = useProfile() || {}
+  const profile = useProfile()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   function handleSubmit(e) {
@@ -11,52 +11,45 @@ export default function ContactSection() {
     setIsSubmitting(true)
     setTimeout(() => {
       setIsSubmitting(false)
-      alert("Message sent! Thank you for your message. I'll get back to you soon.")
+      // Simple feedback. You can replace with a toast implementation later.
+      alert('Message sent! Thank you for your message. I\'ll get back to you soon.')
     }, 1500)
   }
 
   return (
-    <section id="contact" className="py-24 px-4 relative">
+    <section id="contact" className="py-24 px-4 relative bg-[hsl(var(--secondary)/0.3)]">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="reveal text-3xl md:text-4xl font-bold text-center">
-          Get in <span className="text-gradient-animated">Touch</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Get in <span className="text-primary">Touch</span>
         </h2>
-        <p className="reveal text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          {profile.about?.contactIntro || ''}
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Have a project in mind or want to collaborate? Reach out—always open to new opportunities.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Info */}
-          <div className="space-y-8 surface-card p-8 rounded-lg reveal">
+          <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact information</h3>
             <div className="space-y-6 justify-center">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-[hsl(var(--primary)/0.1)] text-primary"><Mail className="h-6 w-6" /></div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Email</h4>
-                  {profile.email ? (
-                    <a href={`mailto:${profile.email}`} className="text-muted-foreground hover:text-primary transition-colors">{profile.email}</a>
-                  ) : (
-                    <span className="text-muted-foreground">—</span>
-                  )}
+                  <a href={`mailto:${profile.email || 'hello@example.com'}`} className="text-muted-foreground hover:text-primary transition-colors">{profile.email || 'hello@example.com'}</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-[hsl(var(--primary)/0.1)] text-primary"><Phone className="h-6 w-6" /></div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Phone</h4>
-                  {profile.phone ? (
-                    <a href={`tel:${(profile.phone || '').replace(/\s/g,'')}`} className="text-muted-foreground hover:text-primary transition-colors">{profile.phone}</a>
-                  ) : (
-                    <span className="text-muted-foreground">—</span>
-                  )}
+                  <a href={`tel:${(profile.phone || '').replace(/\s/g,'') || '+11234567890'}`} className="text-muted-foreground hover:text-primary transition-colors">{profile.phone || '+1 123 456 7890'}</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-[hsl(var(--primary)/0.1)] text-primary"><MapPin className="h-6 w-6" /></div>
                 <div>
                   <h4 className="font-medium text-sm mb-1">Location</h4>
-                  <div className="text-muted-foreground">{profile.location || '—'}</div>
+                  <div className="text-muted-foreground">{profile.location || 'Your City, Country'}</div>
                 </div>
               </div>
             </div>
@@ -73,7 +66,7 @@ export default function ContactSection() {
           </div>
 
           {/* Form */}
-          <div className="surface-card p-8 rounded-lg reveal">
+          <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6">Send a message</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
@@ -82,7 +75,7 @@ export default function ContactSection() {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder={profile?.name || ''}
+                  placeholder={profile?.name || 'Your Name'}
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring focus:ring-[hsl(var(--primary))]"
                 />
@@ -93,7 +86,7 @@ export default function ContactSection() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder={profile?.email || ''}
+                  placeholder={profile?.email || 'you@example.com'}
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring focus:ring-[hsl(var(--primary))]"
                 />
@@ -103,7 +96,7 @@ export default function ContactSection() {
                 <textarea
                   id="message"
                   name="message"
-                  placeholder={''}
+                  placeholder="Hello, I\'d like to talk about..."
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring focus:ring-[hsl(var(--primary))] resize-none"

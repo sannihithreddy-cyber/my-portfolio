@@ -1,15 +1,8 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useProfile } from '@/data/ProfileContext.jsx'
-
-const navItems = [
-  { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
+import { navItems } from '@/data/nav.js'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -30,7 +23,7 @@ export default function Navbar() {
     <nav
       className={cn(
         'fixed w-full z-40 transition-all duration-300',
-        isScrolled ? 'py-3 backdrop-blur-md shadow-sm bg-[hsl(var(--background)/0.8)]' : 'py-5'
+        isScrolled ? 'py-3 surface-glass' : 'py-5'
       )}
     >
       <div className="container flex items-center justify-between">

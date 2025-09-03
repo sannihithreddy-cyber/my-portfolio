@@ -52,6 +52,17 @@ const PortfolioSchema = new mongoose.Schema(
         githubUrl: String,
       },
     ],
+    certifications: [
+      {
+        id: Number,
+        title: String,
+        issuer: String,
+        issueDate: String,
+        credentialId: String,
+        credentialUrl: String,
+        badgeImage: String,
+      },
+    ],
   },
   { timestamps: true }
 )
@@ -63,6 +74,11 @@ async function run() {
     console.log('Connecting to Mongo...')
     await mongoose.connect(MONGODB_URI)
     console.log('Connected')
+    // Ensure a single authoritative portfolio doc by default
+    if (process.env.PRESERVE !== 'true') {
+      await Portfolio.deleteMany({})
+      console.log('Cleared existing portfolio documents')
+    }
     const created = await Portfolio.create(payload)
     console.log('Seeded document with _id:', created._id.toString())
   } catch (err) {
@@ -74,4 +90,3 @@ async function run() {
 }
 
 run()
-

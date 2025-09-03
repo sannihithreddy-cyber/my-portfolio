@@ -1,22 +1,23 @@
 {
   "name": "Banala Sannihith",
   "brandName": "Sannihith Portfolio",
-  "role": "Data Analyst",
+  "role": "Full Stack Developer | AI Enthusiast",
   "siteName": "sannihith.dev",
   "siteUrl": "",
   "about": {
-    "title": "Data Analyst | ML & BI Enthusiast",
+    "title": "Full Stack Developer | AI Enthusiast",
     "paragraphs": [
       "EDA, descriptive analytics, data cleaning, preprocessing, and visualization with a strong foundation in statistics.",
-      "Hands-on with Python (NumPy, Pandas, Scikit‑learn, Matplotlib, Seaborn, Plotly, Yellowbrick), SQL, and BI tools including Power BI and Excel."
+      "Hands-on with Python (NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, Plotly, Yellowbrick), SQL, and BI tools including Power BI and Excel."
     ],
+    "contactIntro": "Have a project in mind or want to collaborate? I’m always open to new opportunities.",
     "resumeUrl": "/resume.pdf"
   },
   "location": "Waterloo, Canada",
   "email": "sannihithreddy2002@gmail.com",
   "phone": "+1 437 779 8235",
   "socials": {
-    "github": "",
+    "github": "https://github.com/sannihithreddy-cyber",
     "linkedin": "https://www.linkedin.com/in/banalasannihith/",
     "twitter": "",
     "instagram": "",
@@ -24,32 +25,33 @@
     "website": ""
   },
   "skills": [
-    { "name": "Python", "level": 90, "category": "data" },
-    { "name": "SQL", "level": 85, "category": "data" },
-    { "name": "Statistics (Descriptive & Inferential)", "level": 80, "category": "data" },
-    { "name": "NumPy", "level": 85, "category": "ml" },
-    { "name": "Pandas", "level": 90, "category": "ml" },
-    { "name": "Scikit-learn", "level": 80, "category": "ml" },
-    { "name": "Matplotlib", "level": 85, "category": "ml" },
-    { "name": "Seaborn", "level": 85, "category": "ml" },
-    { "name": "Plotly", "level": 75, "category": "ml" },
-    { "name": "Yellowbrick", "level": 70, "category": "ml" },
-    { "name": "Power BI", "level": 85, "category": "bi" },
-    { "name": "MS Excel", "level": 90, "category": "bi" },
-    { "name": "MS PowerPoint", "level": 80, "category": "bi" },
-    { "name": "HTML", "level": 70, "category": "web" },
-    { "name": "JavaScript", "level": 65, "category": "web" },
-    { "name": "Communication", "level": 85, "category": "soft" },
-    { "name": "Business Acumen", "level": 80, "category": "soft" },
-    { "name": "Critical Thinking", "level": 85, "category": "soft" }
+    { "name": "Python", "level": 90, "category": "ai-enthusiast" },
+    { "name": "SQL", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Statistics (Descriptive & Inferential)", "level": 80, "category": "ai-enthusiast" },
+    { "name": "NumPy", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Pandas", "level": 90, "category": "ai-enthusiast" },
+    { "name": "Scikit-learn", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Matplotlib", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Seaborn", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Plotly", "level": 75, "category": "ai-enthusiast" },
+    { "name": "Yellowbrick", "level": 70, "category": "ai-enthusiast" },
+    { "name": "Power BI", "level": 85, "category": "ai-enthusiast" },
+    { "name": "MS Excel", "level": 90, "category": "ai-enthusiast" },
+    { "name": "MS PowerPoint", "level": 80, "category": "ai-enthusiast" },
+    { "name": "HTML", "level": 70, "category": "fullstack" },
+    { "name": "JavaScript", "level": 65, "category": "fullstack" },
+    { "name": "React", "level": 85, "category": "fullstack" },
+    { "name": "Communication", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Business Acumen", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Critical Thinking", "level": 85, "category": "ai-enthusiast" }
   ],
   "projects": [
     {
       "id": 1,
       "title": "Customer Analysis & Recommendation System",
-      "description": "Transformed UK retail transaction data into customer-centric views; performed segmentation with K‑Means and built recommendations for cross‑sell of unpurchased items.",
+      "description": "Transformed UK retail transaction data into customer-centric views; performed segmentation with K-Means and built recommendations for cross-sell of unpurchased items.",
       "image": "/projects/project1.png",
-      "tags": ["Python", "Pandas", "K‑Means", "Recommendation"],
+      "tags": ["Python", "Pandas", "K-Means", "Recommendation"],
       "demoUrl": "#",
       "githubUrl": "#"
     },
@@ -67,18 +69,47 @@
       "title": "Android Malware Detection (ML)",
       "description": "Built models (SVM, Neural Network) to classify Android malware; compared grid search vs. random search for hyperparameter optimization.",
       "image": "/projects/project3.png",
-      "tags": ["Python", "Scikit‑learn", "SVM", "Neural Network"],
+      "tags": ["Python", "Scikit-learn", "SVM", "Neural Network"],
       "demoUrl": "#",
       "githubUrl": "#"
     },
     {
       "id": 4,
-      "title": "DHRITI – Capstone Website (Group‑9)",
-      "description": "Implemented Notifications model/API (mark‑as‑read workflow), responsive navbar and layouts, and front‑end validations. Stack: React + Bootstrap, Node API.",
+      "title": "DHRITI — Capstone Website (Group-9)",
+      "description": "Implemented Notifications model/API (mark-as-read workflow), responsive navbar and layouts, and front-end validations. Stack: React + Bootstrap, Node API.",
       "image": "/projects/project3.png",
       "tags": ["React", "Bootstrap", "Node", "Notifications", "Validation"],
       "demoUrl": "#",
       "githubUrl": "#"
+    }
+  ],
+  "certifications": [
+    {
+      "id": 101,
+      "title": "Google Data Analytics Professional Certificate",
+      "issuer": "Coursera | Google",
+      "issueDate": "2023-07-15",
+      "credentialId": "ABC-123-GDA",
+      "credentialUrl": "https://www.credly.com/badges/google-data-analytics",
+      "badgeImage": "/badges/google-data-analytics.png"
+    },
+    {
+      "id": 102,
+      "title": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "issueDate": "2024-02-10",
+      "credentialId": "AWS-CLF-XYZ",
+      "credentialUrl": "https://www.credly.com/badges/aws-cloud-practitioner",
+      "badgeImage": "/badges/aws-cloud-practitioner.png"
+    },
+    {
+      "id": 103,
+      "title": "Microsoft Power BI Data Analyst (PL-300)",
+      "issuer": "Microsoft",
+      "issueDate": "2024-05-20",
+      "credentialId": "MS-PL300-789",
+      "credentialUrl": "https://learn.microsoft.com/certifications/power-bi-data-analyst-associate/",
+      "badgeImage": "/badges/microsoft-pl300.png"
     }
   ]
 }

@@ -2,21 +2,21 @@ import { ExternalLink, Github, ArrowRight } from 'lucide-react'
 import { useProfile } from '@/data/ProfileContext.jsx'
 export default function ProjectsSection() {
   const profile = useProfile()
-  const PROJECTS = profile.projects && profile.projects.length ? profile.projects : []
+  const PROJECTS = Array.isArray(profile.projects) ? profile.projects : []
 
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center">
-          Featured <span className="text-primary">Projects</span>
+        <h2 className="reveal text-3xl md:text-4xl font-bold text-center">
+          Featured <span className="text-gradient-animated">Projects</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="reveal text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           A few recent builds showcasing design, performance, and developer experience.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROJECTS.map((p) => (
-            <div key={p.id} className="group bg-card rounded-lg overflow-hidden shadow-sm card-hover">
+            <div key={p.id} className="group surface-card overflow-hidden hover-lift reveal">
               <div className="h-48 overflow-hidden bg-[hsl(var(--secondary)/0.3)]">
                 {/* If images are not present yet, this block keeps layout clean */}
                 <img
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
               </div>
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {p.tags.map((t, i) => (
+                  {(p.tags || []).map((t, i) => (
                     <span key={i} className="px-2 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground">
                       {t}
                     </span>
@@ -63,7 +63,7 @@ export default function ProjectsSection() {
 
         <div className="text-center mt-12">
           <a
-            href={(profile.socials?.github) || 'https://github.com/'}
+            href={profile.socials?.github || '#'}
             target="_blank"
             className="cosmic-button inline-flex items-center gap-2 mx-auto"
           >
