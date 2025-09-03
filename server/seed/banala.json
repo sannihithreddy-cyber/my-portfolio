@@ -41,6 +41,20 @@
     { "name": "HTML", "level": 70, "category": "fullstack" },
     { "name": "JavaScript", "level": 65, "category": "fullstack" },
     { "name": "React", "level": 85, "category": "fullstack" },
+    { "name": "Data Structures", "level": 85, "category": "fullstack" },
+    { "name": "Linear Regression", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Logistic Regression", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Decision Trees", "level": 80, "category": "ai-enthusiast" },
+    { "name": "K-Means", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Clustering", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Anomaly Detection", "level": 75, "category": "ai-enthusiast" },
+    { "name": "Collaborative Filtering", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Supervised Learning", "level": 85, "category": "ai-enthusiast" },
+    { "name": "Unsupervised Learning", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Neural Networks", "level": 80, "category": "ai-enthusiast" },
+    { "name": "Recommender Systems", "level": 82, "category": "ai-enthusiast" },
+    { "name": "Reinforcement Learning", "level": 75, "category": "ai-enthusiast" },
+    { "name": "Advanced Learning Algorithms", "level": 85, "category": "ai-enthusiast" },
     { "name": "Communication", "level": 85, "category": "ai-enthusiast" },
     { "name": "Business Acumen", "level": 80, "category": "ai-enthusiast" },
     { "name": "Critical Thinking", "level": 85, "category": "ai-enthusiast" }
@@ -85,31 +99,32 @@
   ],
   "certifications": [
     {
-      "id": 101,
-      "title": "Google Data Analytics Professional Certificate",
-      "issuer": "Coursera | Google",
-      "issueDate": "2023-07-15",
-      "credentialId": "ABC-123-GDA",
-      "credentialUrl": "https://www.credly.com/badges/google-data-analytics",
-      "badgeImage": "/badges/google-data-analytics.png"
+      "id": 201,
+      "title": "Advanced Learning Algorithms",
+      "issuer": "DeepLearning.AI | Stanford Online",
+      "issueDate": "2023-02-26",
+      "credentialId": "DRRCS4G4TZFH",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/DRRCS4G4TZFH",
+      "badgeImage": ""
     },
     {
-      "id": 102,
-      "title": "AWS Certified Cloud Practitioner",
-      "issuer": "Amazon Web Services",
-      "issueDate": "2024-02-10",
-      "credentialId": "AWS-CLF-XYZ",
-      "credentialUrl": "https://www.credly.com/badges/aws-cloud-practitioner",
-      "badgeImage": "/badges/aws-cloud-practitioner.png"
+      "id": 202,
+      "title": "Machine Learning Specialization",
+      "issuer": "DeepLearning.AI | Stanford Online",
+      "issueDate": "2023-07-13",
+      "credentialId": "K9SLBT4EPZWW",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/certificate/K9SLBT4EPZWW",
+      "badgeImage": ""
     },
     {
-      "id": 103,
-      "title": "Microsoft Power BI Data Analyst (PL-300)",
-      "issuer": "Microsoft",
-      "issueDate": "2024-05-20",
-      "credentialId": "MS-PL300-789",
-      "credentialUrl": "https://learn.microsoft.com/certifications/power-bi-data-analyst-associate/",
-      "badgeImage": "/badges/microsoft-pl300.png"
+      "id": 203,
+      "title": "Python Data Structures",
+      "issuer": "University of Michigan | Coursera",
+      "issueDate": "2022-04-16",
+      "credentialId": "MVVLZLPLZRDL",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/MVVLZLPLZRDL",
+      "badgeImage": ""
     }
   ]
 }
+
