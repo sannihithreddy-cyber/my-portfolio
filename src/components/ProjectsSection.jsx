@@ -63,8 +63,9 @@ export default function ProjectsSection() {
 
         <div className="text-center mt-12">
           <a
-            href={profile.socials?.github || '#'}
+            href={profile.socials?.github || 'https://github.com/sannihithreddy-cyber'}
             target="_blank"
+            rel="noopener noreferrer"
             className="cosmic-button inline-flex items-center gap-2 mx-auto"
           >
             Check my GitHub <ArrowRight size={16} />

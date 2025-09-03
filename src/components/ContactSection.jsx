@@ -64,10 +64,10 @@ export default function ContactSection() {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Connect with me</h4>
               <div className="flex gap-4 justify-center md:justify-start">
-                <a href={profile.socials?.linkedin || '#'} target="_blank" className="text-foreground hover:text-primary transition-colors"><Linkedin /></a>
-                <a href={profile.socials?.twitter || '#'} target="_blank" className="text-foreground hover:text-primary transition-colors"><Twitter /></a>
-                <a href={profile.socials?.instagram || '#'} target="_blank" className="text-foreground hover:text-primary transition-colors"><Instagram /></a>
-                <a href={profile.socials?.twitch || '#'} target="_blank" className="text-foreground hover:text-primary transition-colors"><Twitch /></a>
+                <a href={profile.socials?.linkedin || 'https://www.linkedin.com/in/banalasannihith/'} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors"><Linkedin /></a>
+                <a href={profile.socials?.twitter || '#'} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors"><Twitter /></a>
+                <a href={profile.socials?.instagram || '#'} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors"><Instagram /></a>
+                <a href={profile.socials?.twitch || '#'} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors"><Twitch /></a>
               </div>
             </div>
           </div>
@@ -123,4 +123,3 @@ export default function ContactSection() {
     </section>
   )
 }
-
