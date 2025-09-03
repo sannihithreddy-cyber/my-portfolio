@@ -5,14 +5,47 @@ import { useProfile } from '@/data/ProfileContext.jsx'
 export default function ContactSection() {
   const profile = useProfile() || {}
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [notice, setNotice] = useState({ type: '', message: '', previewUrl: '' })
 
   function handleSubmit(e) {
     e.preventDefault()
+    const formEl = e.currentTarget
     setIsSubmitting(true)
-    setTimeout(() => {
-      setIsSubmitting(false)
-      alert("Message sent! Thank you for your message. I'll get back to you soon.")
-    }, 1500)
+    setNotice({ type: 'info', message: 'Sending your message…', previewUrl: '' })
+    ;(async () => {
+      try {
+        const form = new FormData(formEl)
+        const payload = {
+          name: form.get('name'),
+          email: form.get('email'),
+          message: form.get('message'),
+        }
+        const base = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || ''
+        const res = await fetch(`${base}/api/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+        const data = await res.json().catch(() => ({}))
+        if (!res.ok) throw new Error(data?.error || 'Failed to send')
+        setIsSubmitting(false)
+        if (data.previewUrl) {
+          try { console.info('[contact] Email preview URL:', data.previewUrl); window.__MAIL_PREVIEW__ = data.previewUrl } catch {}
+        }
+        setNotice({
+          type: 'success',
+          message: data.previewUrl
+            ? 'Message sent (developer preview generated).'
+            : "Message sent! I'll get back to you soon.",
+          previewUrl: data.previewUrl || '',
+        })
+        formEl?.reset()
+      } catch (err) {
+        console.error(err)
+        setIsSubmitting(false)
+        setNotice({ type: 'error', message: err?.message || 'Sorry, there was a problem sending your message.', previewUrl: '' })
+      }
+    })()
   }
 
   return (
@@ -24,6 +57,42 @@ export default function ContactSection() {
         <p className="reveal text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           {profile.about?.contactIntro || ''}
         </p>
+
+        {!!notice.type && (
+          <div
+            className={
+              notice.type === 'success'
+                ? 'surface-card border border-[hsl(var(--success)/.5)] text-foreground p-4 rounded-lg mb-8'
+                : notice.type === 'error'
+                ? 'surface-card border border-[hsl(var(--danger)/.5)] text-foreground p-4 rounded-lg mb-8'
+                : 'surface-card border border-border text-foreground p-4 rounded-lg mb-8'
+            }
+            role="status"
+            aria-live="polite"
+          >
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                {notice.message}
+                {notice.previewUrl ? (
+                  <>
+                    {' '}
+                    <a href={notice.previewUrl} target="_blank" rel="noopener noreferrer" className="underline-animate">
+                      Open preview
+                    </a>
+                  </>
+                ) : null}
+              </div>
+              <button
+                type="button"
+                className="px-2 py-1 rounded-md surface-glass hover:bg-secondary"
+                aria-label="Dismiss"
+                onClick={() => setNotice({ type: '', message: '', previewUrl: '' })}
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Info */}

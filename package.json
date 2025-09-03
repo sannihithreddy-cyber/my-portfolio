@@ -11,13 +11,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "clsx": "^2.1.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "lucide-react": "^0.447.0",
     "express": "^4.19.2",
-    "multer": "^1.4.5-lts.1",
+    "lucide-react": "^0.447.0",
     "mongoose": "^8.4.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.1",
