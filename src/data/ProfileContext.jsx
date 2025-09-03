@@ -22,13 +22,10 @@ export function ProfileProvider({ children }) {
           if (res.ok) {
             const remote = await res.json()
             if (!ignore && remote) setData(remote)
-            try { window.__PROFILE_DEBUG__ = { ok: true, url, keys: Object.keys(remote || {}) } } catch {}
-            try { console.info('[profile] loaded from', url) } catch {}
             break
           }
         } catch (_) {
           // try next candidate
-          try { window.__PROFILE_DEBUG__ = { ok: false, url, error: 'fetch failed' } } catch {}
         }
       }
     }
