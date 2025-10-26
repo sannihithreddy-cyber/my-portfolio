@@ -184,7 +184,7 @@ The frontend reads this JSON via `useProfile()` and renders sections accordingly
   - Wraps Theme toggle (dark/light), `StarBackground`, `Comet` (occasional streak), `Ladybug` (continuous wing‑flapping wanderer), `Navbar`, and `Footer`.
 
 - Visual backgrounds
-  - `BackgroundOrbs.jsx`: Soft gradient orbs and spotlight glow.
+  - `BackgroundOrbs.jsx`: Layered hand-crafted purple/blue wash + analog noise with built-in contrast veil for accessibility.
   - `ConstellationCanvas.jsx`: Interactive canvas linking points; reacts to mouse.
   - `StarBackground.jsx`: Stars + meteors using CSS animations.
 
@@ -219,7 +219,7 @@ The frontend reads this JSON via `useProfile()` and renders sections accordingly
   - Colors: `.bg-background`, `.bg-card`, `.text-foreground`, `.text-primary`, `.text-muted-foreground`, `.surface-glass`, `.surface-card`.
   - Effects: `.text-glow`, `.hover-lift`, `.underline-animate`.
   - Reveal: `.reveal` + `.is-visible` (added by JS).
-  - Hero visuals: `.spotlight`, `.grid-overlay`, `.text-gradient`, `.text-gradient-animated`.
+  - Hero visuals: `.hero-gradient-base`, `.hero-gradient-wash`, `.hero-gradient-contrast`, `.hero-gradient-noise`, `.grid-overlay`, `.text-gradient`, `.text-gradient-animated`.
   - Section transitions: `.section-divider` (animated gradient line), `.section-alt` (subtle radial veils).
   - Animations: keyframes for float, aurora, shimmer, blob, gradient‑move, grow.
   - Ladybug: `.ladybug`, `.animate-ladybug` and wing flap keyframes.
@@ -312,4 +312,3 @@ curl -s -X POST http://localhost:5050/api/contact \
 ---
 
 If you’d like, I can also generate a short CONTRIBUTING.md (coding style, commit message conventions) and a CHANGELOG template to make ongoing updates clearer.
-
