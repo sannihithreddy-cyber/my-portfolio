@@ -68,6 +68,25 @@ const PortfolioSchema = new mongoose.Schema(
         badgeImage: String,
       },
     ],
+    experience: [
+      {
+        id: Number,
+        company: String,
+        role: String,
+        period: String,
+        location: String,
+        bullets: [String],
+      },
+    ],
+    education: [
+      {
+        id: Number,
+        institution: String,
+        degree: String,
+        period: String,
+        location: String,
+      },
+    ],
   },
   { timestamps: true }
 )
@@ -166,7 +185,12 @@ app.post('/api/contact', async (req, res) => {
       })
     }
 
-    const fromAddr = process.env.MAIL_FROM || process.env.SMTP_USER || email
+    // When using a third-party SMTP relay (e.g. Brevo), the from address MUST match
+    // an authorized sender on that account — using an arbitrary Gmail as MAIL_FROM will
+    // get rejected. Always send from the authenticated SMTP user and let replyTo route replies.
+    const fromAddr = process.env.SMTP_HOST && process.env.SMTP_USER
+      ? `"Sannihith Portfolio" <${process.env.SMTP_USER}>`
+      : process.env.MAIL_FROM || email
     const subject = process.env.MAIL_SUBJECT || `New message from ${name}`
     const html = `
       <div style="font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height:1.6;">

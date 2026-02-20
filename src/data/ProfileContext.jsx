@@ -1,34 +1,56 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { profile as localProfile } from '@/data/profile.js'
 
-const ProfileCtx = createContext({})
+const ProfileCtx = createContext(null)
+
+const RETRY_DELAYS = [2000, 5000, 10000, 15000, 20000]
 
 export function ProfileProvider({ children }) {
-  const [data, setData] = useState({})
+  // Start with local fallback so every section renders immediately.
+  // API data replaces it once MongoDB responds.
+  // Both sources must contain identical data — keep profile.js and banala.json in sync.
+  const [data, setData] = useState(localProfile)
 
   useEffect(() => {
     let ignore = false
+
+    async function tryFetch(candidates) {
+      for (const url of candidates) {
+        try {
+          const res = await fetch(url, { credentials: 'omit' })
+          if (res.ok && res.status !== 204) {
+            const remote = await res.json()
+            if (!ignore && remote && Object.keys(remote).length > 0) {
+              // Merge: API data takes priority, but local fallback fills any
+              // fields the DB doc doesn't have yet (e.g. experience, education
+              // if seeded before the schema was updated on Render).
+              setData((prev) => ({ ...prev, ...remote }))
+              return true
+            }
+          }
+        } catch (_) {}
+      }
+      return false
+    }
+
     async function load() {
       const candidates = []
       const envBase = import.meta.env.VITE_API_URL?.replace(/\/$/, '')
       if (envBase) candidates.push(`${envBase}/api/profile?t=${Date.now()}`)
-      // same-origin (works in Vite dev via proxy)
       candidates.push(`/api/profile?t=${Date.now()}`)
-      // local fallback for when opening index.html directly or running static build
       candidates.push(`http://localhost:5050/api/profile?t=${Date.now()}`)
 
-      for (const url of candidates) {
-        try {
-          const res = await fetch(url, { credentials: 'omit' })
-          if (res.ok) {
-            const remote = await res.json()
-            if (!ignore && remote) setData(remote)
-            break
-          }
-        } catch (_) {
-          // try next candidate
-        }
+      const ok = await tryFetch(candidates)
+      if (ok || ignore) return
+
+      for (const delay of RETRY_DELAYS) {
+        await new Promise((r) => setTimeout(r, delay))
+        if (ignore) return
+        const retried = await tryFetch(candidates)
+        if (retried || ignore) return
       }
     }
+
     load()
     return () => { ignore = true }
   }, [])

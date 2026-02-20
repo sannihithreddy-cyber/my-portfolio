@@ -1,5 +1,6 @@
 import HeroSection from '@/components/HeroSection.jsx'
 import AboutSection from '@/components/AboutSection.jsx'
+import ExperienceSection from '@/components/ExperienceSection.jsx'
 import SkillsSection from '@/components/SkillsSection.jsx'
 import ProjectsSection from '@/components/ProjectsSection.jsx'
 import ContactSection from '@/components/ContactSection.jsx'
@@ -14,13 +15,15 @@ function Page() {
       <div className="section-divider" />
       <div className="section-alt"><AboutSection /></div>
       <div className="section-divider" />
-      <SkillsSection />
+      <ExperienceSection />
       <div className="section-divider" />
-      <div className="section-alt"><CertificationsSection /></div>
+      <div className="section-alt"><SkillsSection /></div>
       <div className="section-divider" />
-      <ProjectsSection />
+      <CertificationsSection />
       <div className="section-divider" />
-      <div className="section-alt"><ContactSection /></div>
+      <div className="section-alt"><ProjectsSection /></div>
+      <div className="section-divider" />
+      <ContactSection />
     </Layout>
   )
 }

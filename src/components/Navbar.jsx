@@ -27,8 +27,10 @@ export default function Navbar() {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#hero" className="relative z-10 text-xl font-bold text-primary flex items-center">
-          <span className="text-glow">{profile?.brandName || `${profile?.name || ''} Portfolio`}</span>
+        <a href="#hero" className="relative z-10 flex items-center gap-2 group">
+          <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground select-none">
+            SB
+          </span>
         </a>
 
         {/* Desktop nav */}

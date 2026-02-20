@@ -1,19 +1,20 @@
 {
-  "name": "Banala Sannihith",
-  "brandName": "Sannihith Portfolio",
-  "role": "Full Stack Developer | AI Enthusiast",
+  "name": "Sannihith Banala",
+  "brandName": "Sannihith · Data Analyst",
+  "role": "Data Analyst · Power BI · SQL · Python",
   "siteName": "sannihith.dev",
   "siteUrl": "",
   "about": {
-    "title": "Full Stack Developer | AI Enthusiast",
+    "title": "Data Analyst",
+    "resumeUrl": "/resume.pdf",
+    "contactIntro": "Open to new analytics roles and collaborations. Let's talk data.",
     "paragraphs": [
-      "EDA, descriptive analytics, data cleaning, preprocessing, and visualization with a strong foundation in statistics.",
-      "Hands-on with Python (NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, Plotly, Yellowbrick), SQL, and BI tools including Power BI and Excel."
-    ],
-    "contactIntro": "Have a project in mind or want to collaborate? I’m always open to new opportunities.",
-    "resumeUrl": "/resume.pdf"
+      "I'm drawn to the moment when a messy spreadsheet becomes a clear answer. After 2+ years working across consulting and enterprise analytics — at BDO Global and Wipro — I've built dashboards that replaced Monday morning emails and SQL pipelines that made the data team's backlog disappear.",
+      "Whether it's migrating 12+ legacy Crystal reports to Power BI, cutting report load times by 40% with star-schema SQL views, or supporting 50+ business users on a US telecom account, the common thread is always the same: make the data work for the people who need to act on it, not the other way around.",
+      "Outside client work, I'm building a market-data pipeline in Python — pulling live sector ETF data, running KMeans clustering to find behavioural patterns that standard sector labels miss, and using a Markov transition matrix to make the output actually investable. It's the kind of project that keeps the tools sharp."
+    ]
   },
-  "location": "Waterloo, Canada",
+  "location": "Waterloo, ON, Canada",
   "email": "sannihithreddy2002@gmail.com",
   "phone": "+1 437 779 8235",
   "socials": {
@@ -25,74 +26,49 @@
     "website": ""
   },
   "skills": [
-    { "name": "Python", "level": 90, "category": "ai-enthusiast" },
-    { "name": "SQL", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Statistics (Descriptive & Inferential)", "level": 80, "category": "ai-enthusiast" },
-    { "name": "NumPy", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Pandas", "level": 90, "category": "ai-enthusiast" },
-    { "name": "Scikit-learn", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Matplotlib", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Seaborn", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Plotly", "level": 75, "category": "ai-enthusiast" },
-    { "name": "Yellowbrick", "level": 70, "category": "ai-enthusiast" },
-    { "name": "Power BI", "level": 85, "category": "ai-enthusiast" },
-    { "name": "MS Excel", "level": 90, "category": "ai-enthusiast" },
-    { "name": "MS PowerPoint", "level": 80, "category": "ai-enthusiast" },
-    { "name": "HTML", "level": 70, "category": "fullstack" },
-    { "name": "JavaScript", "level": 65, "category": "fullstack" },
-    { "name": "React", "level": 85, "category": "fullstack" },
-    { "name": "Data Structures", "level": 85, "category": "fullstack" },
-    { "name": "Linear Regression", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Logistic Regression", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Decision Trees", "level": 80, "category": "ai-enthusiast" },
-    { "name": "K-Means", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Clustering", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Anomaly Detection", "level": 75, "category": "ai-enthusiast" },
-    { "name": "Collaborative Filtering", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Supervised Learning", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Unsupervised Learning", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Neural Networks", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Recommender Systems", "level": 82, "category": "ai-enthusiast" },
-    { "name": "Reinforcement Learning", "level": 75, "category": "ai-enthusiast" },
-    { "name": "Advanced Learning Algorithms", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Communication", "level": 85, "category": "ai-enthusiast" },
-    { "name": "Business Acumen", "level": 80, "category": "ai-enthusiast" },
-    { "name": "Critical Thinking", "level": 85, "category": "ai-enthusiast" }
+    { "name": "Power BI (DAX, Power Query/M, RLS)", "level": 95, "category": "bi" },
+    { "name": "Excel (XLOOKUP, Power Query, Pivot)", "level": 90, "category": "bi" },
+    { "name": "Power Automate", "level": 75, "category": "bi" },
+
+    { "name": "SQL (CTEs, Window Functions)", "level": 92, "category": "sql" },
+    { "name": "SQL Server", "level": 87, "category": "sql" },
+    { "name": "MySQL", "level": 80, "category": "sql" },
+
+    { "name": "Python", "level": 88, "category": "python" },
+    { "name": "pandas", "level": 92, "category": "python" },
+    { "name": "NumPy", "level": 85, "category": "python" },
+    { "name": "scikit-learn", "level": 82, "category": "python" },
+    { "name": "Matplotlib", "level": 80, "category": "python" },
+    { "name": "Seaborn", "level": 80, "category": "python" },
+    { "name": "Plotly", "level": 78, "category": "python" },
+
+    { "name": "EDA & Descriptive Analytics", "level": 92, "category": "analytics" },
+    { "name": "KPI Design & Cohort Analysis", "level": 90, "category": "analytics" },
+    { "name": "Hypothesis Testing", "level": 82, "category": "analytics" },
+    { "name": "A/B Testing", "level": 78, "category": "analytics" },
+    { "name": "Feature Engineering", "level": 83, "category": "analytics" },
+    { "name": "Linear & Logistic Regression", "level": 82, "category": "analytics" },
+    { "name": "Decision Trees & Random Forests", "level": 80, "category": "analytics" },
+    { "name": "Gradient Boosting (XGBoost)", "level": 76, "category": "analytics" },
+    { "name": "Support Vector Machines", "level": 75, "category": "analytics" },
+    { "name": "Naive Bayes", "level": 74, "category": "analytics" },
+    { "name": "KMeans / Clustering", "level": 83, "category": "analytics" },
+    { "name": "PCA (Dimensionality Reduction)", "level": 75, "category": "analytics" },
+    { "name": "ARIMA (Time Series)", "level": 73, "category": "analytics" },
+
+    { "name": "Git / GitHub", "level": 82, "category": "tools" },
+    { "name": "Jira", "level": 80, "category": "tools" },
+    { "name": "Jupyter Notebook", "level": 88, "category": "tools" },
+    { "name": "Postman", "level": 70, "category": "tools" },
+    { "name": "Docker (basics)", "level": 58, "category": "tools" }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Customer Analysis & Recommendation System",
-      "description": "Transformed UK retail transaction data into customer-centric views; performed segmentation with K-Means and built recommendations for cross-sell of unpurchased items.",
+      "title": "Sector Rotation Analytics Pipeline",
+      "description": "Automated ML pipeline analysing S&P 500 sector behaviour under different macro conditions. Pulls live OHLCV data for 11 sector ETFs plus 3 macro indicators (10Y yield, VIX, Dollar Index), engineers return/volatility/momentum/Sharpe features, applies KMeans clustering with Silhouette validation on rolling monthly windows, and builds a Markov regime-transition matrix — delivered as a 4-page Power BI dashboard with drill-through capability.",
       "image": "/projects/project1.png",
-      "tags": ["Python", "Pandas", "K-Means", "Recommendation"],
-      "demoUrl": "#",
-      "githubUrl": "#"
-    },
-    {
-      "id": 2,
-      "title": "Iris Recognition (Daugman’s Algorithm + ANN)",
-      "description": "Implemented iris recognition pipeline, feature extraction, and hyperparameter tuning to improve accuracy; experimented with ANN models.",
-      "image": "/projects/project2.png",
-      "tags": ["Python", "Image Processing", "ANN"],
-      "demoUrl": "#",
-      "githubUrl": "#"
-    },
-    {
-      "id": 3,
-      "title": "Android Malware Detection (ML)",
-      "description": "Built models (SVM, Neural Network) to classify Android malware; compared grid search vs. random search for hyperparameter optimization.",
-      "image": "/projects/project3.png",
-      "tags": ["Python", "Scikit-learn", "SVM", "Neural Network"],
-      "demoUrl": "#",
-      "githubUrl": "#"
-    },
-    {
-      "id": 4,
-      "title": "DHRITI — Capstone Website (Group-9)",
-      "description": "Implemented Notifications model/API (mark-as-read workflow), responsive navbar and layouts, and front-end validations. Stack: React + Bootstrap, Node API.",
-      "image": "/projects/project3.png",
-      "tags": ["React", "Bootstrap", "Node", "Notifications", "Validation"],
+      "tags": ["Python", "pandas", "scikit-learn", "Power BI", "yfinance", "KMeans"],
       "demoUrl": "#",
       "githubUrl": "#"
     }
@@ -100,15 +76,6 @@
   "certifications": [
     {
       "id": 201,
-      "title": "Advanced Learning Algorithms",
-      "issuer": "DeepLearning.AI | Stanford Online",
-      "issueDate": "2023-02-26",
-      "credentialId": "DRRCS4G4TZFH",
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/DRRCS4G4TZFH",
-      "badgeImage": ""
-    },
-    {
-      "id": 202,
       "title": "Machine Learning Specialization",
       "issuer": "DeepLearning.AI | Stanford Online",
       "issueDate": "2023-07-13",
@@ -117,14 +84,61 @@
       "badgeImage": ""
     },
     {
-      "id": 203,
-      "title": "Python Data Structures",
-      "issuer": "University of Michigan | Coursera",
-      "issueDate": "2022-04-16",
-      "credentialId": "MVVLZLPLZRDL",
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/certificate/MVVLZLPLZRDL",
+      "id": 202,
+      "title": "Data Science",
+      "issuer": "Naresh i Technologies",
+      "issueDate": "2022-06-01",
+      "credentialId": "",
+      "credentialUrl": "",
       "badgeImage": ""
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "BDO Global | BDO Lixar",
+      "role": "Data Analyst",
+      "period": "Apr 2024 – Present",
+      "location": "Canada · Hybrid",
+      "bullets": [
+        "Took 12+ client reports stuck in legacy Crystal/Jasper formats and rebuilt them as interactive Power BI dashboards — what used to take 3 days now lands in stakeholders' inboxes the same morning.",
+        "Designed a consolidated 3-page dashboard for a mid-market retailer bringing together HR headcount, finance P&L, and operations throughput in one view — the team reclaimed ~6 hours of manual Excel work every week.",
+        "Rebuilt the underlying data layer using star-schema views with incremental refresh, which cut dashboard load times by roughly 40% without touching the front-end.",
+        "Wrote DAX time-intelligence measures (YTD, QTD, rolling averages) so leadership could spot trends on their own instead of waiting for month-end reports.",
+        "Set up three Power Automate flows for weekly report distribution — eliminated the recurring email threads asking 'did you send the numbers?'",
+        "Presented dashboard walkthroughs regularly to business leads with no data background, which taught me that the best visual doesn't need an explanation."
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Wipro Limited",
+      "role": "Project Engineer — BI & Reporting",
+      "period": "Feb 2023 – Feb 2024",
+      "location": "India · Onsite",
+      "bullets": [
+        "Owned development and maintenance of 8 dashboards serving 50+ business users across a US telecom client's sales, ops, and network divisions.",
+        "Rewrote core SQL queries using CTEs and window functions to replace deeply nested subqueries — the logic became clean enough that the onshore team could maintain it without digging through documentation.",
+        "Built Python ETL scripts (pandas, NumPy) to pre-aggregate large transactional datasets upstream so dashboards wouldn't time out during peak hours.",
+        "Reduced dashboard query runtime by ~30% through SQL optimisation and materialised views — significantly cut down on 'it's running slow today' complaints.",
+        "Delivered weekly KPI digests to senior management via automated email pipelines, replacing a manual copy-paste process that nobody liked doing.",
+        "Sat between the client's onshore team and the offshore build team, turning vague business questions into specific metric definitions both sides could agree on."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Conestoga College",
+      "degree": "Ontario College Graduate Certificate — Big Data Analytics",
+      "period": "2022 – 2024",
+      "location": "Waterloo, ON, Canada"
+    },
+    {
+      "id": 2,
+      "institution": "Vaagdevi College of Engineering",
+      "degree": "Bachelor of Technology — Computer Science & Engineering",
+      "period": "2018 – 2022",
+      "location": "Warangal, India"
     }
   ]
 }
-

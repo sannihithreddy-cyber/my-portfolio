@@ -61,7 +61,9 @@
 @layer utilities {
   .bg-background { background-color: hsl(var(--background)); }
   .bg-card { background-color: hsl(var(--card)); }
+  .bg-primary { background-color: hsl(var(--primary)); }
   .bg-secondary { background-color: hsl(var(--secondary)); }
+  .bg-muted { background-color: hsl(var(--muted)); }
   .text-foreground { color: hsl(var(--foreground)); }
   .text-muted-foreground { color: hsl(var(--foreground) / 0.7); }
   .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }

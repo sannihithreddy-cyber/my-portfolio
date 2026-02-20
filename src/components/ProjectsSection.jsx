@@ -1,7 +1,7 @@
 import { ExternalLink, Github, ArrowRight } from 'lucide-react'
 import { useProfile } from '@/data/ProfileContext.jsx'
 export default function ProjectsSection() {
-  const profile = useProfile()
+  const profile = useProfile() || {}
   const PROJECTS = Array.isArray(profile.projects) ? profile.projects : []
 
   return (
