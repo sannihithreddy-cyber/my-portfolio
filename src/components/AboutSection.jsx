@@ -1,10 +1,27 @@
+import { BarChart2, Database, Code2, TrendingUp } from 'lucide-react'
 import { useProfile } from '@/data/ProfileContext.jsx'
 
-const STATS = [
-  { value: '15+', label: 'Dashboards shipped' },
-  { value: '2+',  label: 'Years in analytics' },
-  { value: '50+', label: 'Business users served' },
-  { value: '40%', label: 'Avg. load-time reduction' },
+const SERVICES = [
+  {
+    icon: BarChart2,
+    title: 'Dashboard Development',
+    desc: 'Interactive Power BI reports with DAX measures, drill-throughs, and row-level security.',
+  },
+  {
+    icon: Database,
+    title: 'Data Modeling & SQL',
+    desc: 'Star-schema design, CTEs, window functions, and query optimization for fast, maintainable pipelines.',
+  },
+  {
+    icon: Code2,
+    title: 'Python & ETL',
+    desc: 'pandas-based data wrangling, pre-aggregation pipelines, and automated report distribution.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Analytics & Insights',
+    desc: 'EDA, KPI definition, cohort analysis, and translating business questions into clear metrics.',
+  },
 ]
 
 export default function AboutSection() {
@@ -44,12 +61,13 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right — stat cards */}
-          <div className="grid grid-cols-2 gap-4">
-            {STATS.map((s) => (
-              <div key={s.label} className="reveal surface-card p-6 rounded-2xl flex flex-col items-center justify-center text-center hover-lift">
-                <span className="text-3xl font-extrabold text-primary mb-1">{s.value}</span>
-                <span className="text-xs text-muted-foreground leading-tight">{s.label}</span>
+          {/* Right — what I do cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {SERVICES.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="reveal surface-card p-5 rounded-2xl hover-lift text-left border-l-2 border-primary/30">
+                <Icon className="text-primary mb-3" size={20} strokeWidth={1.75} />
+                <h3 className="font-semibold text-sm mb-1">{title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
