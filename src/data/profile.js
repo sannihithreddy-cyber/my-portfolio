@@ -13,9 +13,9 @@ export const profile = {
     resumeUrl: '/resume.pdf',
     contactIntro: "Open to new analytics roles and collaborations. Let's talk data.",
     paragraphs: [
-      "I'm drawn to the moment when a messy spreadsheet becomes a clear answer. After 2+ years working across consulting and enterprise analytics — at BDO Global and Wipro — I've built dashboards that replaced Monday morning emails and SQL pipelines that made the data team's backlog disappear.",
-      "Whether it's migrating 12+ legacy Crystal reports to Power BI, cutting report load times by 40% with star-schema SQL views, or supporting 50+ business users on a US telecom account, the common thread is always the same: make the data work for the people who need to act on it, not the other way around.",
-      "Outside client work, I'm building a market-data pipeline in Python — pulling live sector ETF data, running KMeans clustering to find behavioural patterns that standard sector labels miss, and using a Markov transition matrix to make the output actually investable. It's the kind of project that keeps the tools sharp.",
+      "I'm a data analyst who genuinely loves digging into data — not just building reports but actually figuring out what's going on underneath. Finding a pattern that wasn't obvious, or realizing why a number looks weird, is the part of the job I look forward to.",
+      "I've spent the past 2+ years working in Power BI, SQL, and Python across consulting and enterprise environments. Most of that time has been client-facing — translating messy, inconsistent data into dashboards people actually open on Monday morning.",
+      "Outside of work I'm usually working on personal projects that sit somewhere between data science and machine learning — stuff I find interesting enough to actually finish.",
     ],
   },
 

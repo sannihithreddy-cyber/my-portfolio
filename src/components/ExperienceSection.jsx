@@ -2,15 +2,12 @@ import { useProfile } from '@/data/ProfileContext.jsx'
 
 function ExperienceCard({ job }) {
   return (
-    <div className="reveal relative pl-10 pb-14 last:pb-0">
+    <div className="reveal relative pl-10 pb-12 last:pb-0">
       {/* Timeline line */}
-      <span className="absolute left-0 top-3 bottom-0 w-px bg-gradient-to-b from-primary/60 via-primary/20 to-transparent" aria-hidden="true" />
-      {/* Timeline dot */}
-      <span className="absolute left-[-4px] top-3 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" aria-hidden="true" />
-
-      <div className="surface-card p-7 rounded-2xl hover-lift text-left">
+      <span className="absolute left-0 top-3 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/15 to-transparent" aria-hidden="true" />
+      <div className="surface-card p-7 rounded-2xl hover-lift text-left border-l-2 border-primary/40">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-5">
           <div>
             <h3 className="font-bold text-lg leading-snug">{job.role}</h3>
             <p className="text-primary font-semibold text-sm mt-0.5">{job.company}</p>
@@ -23,10 +20,15 @@ function ExperienceCard({ job }) {
           </div>
         </div>
 
-        {/* Prose paragraphs — no bullet clutter */}
-        <div className="space-y-3">
+        {/* Paragraphs separated by a faint rule */}
+        <div>
           {(job.bullets || []).map((b, i) => (
-            <p key={i} className="text-sm text-muted-foreground leading-relaxed">{b}</p>
+            <div key={i}>
+              {i > 0 && (
+                <div className="my-4 border-t border-border/40" />
+              )}
+              <p className="text-sm text-muted-foreground leading-relaxed">{b}</p>
+            </div>
           ))}
         </div>
       </div>
