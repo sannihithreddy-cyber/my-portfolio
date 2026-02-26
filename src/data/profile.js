@@ -14,7 +14,7 @@ export const profile = {
     contactIntro: "Open to new analytics roles and collaborations. Let's talk data.",
     paragraphs: [
       "I'm a data analyst who genuinely loves digging into data - not just building reports but actually figuring out what's going on underneath. Finding a pattern that wasn't obvious, or realizing why a number looks weird, is the part of the job I look forward to.",
-      "I've spent the past 2+ years working in Power BI, SQL, and Python across consulting and enterprise environments. Most of that time has been client-facing - translating messy, inconsistent data into dashboards people actually open on Monday morning.",
+      "I've spent the past 3+ years working in Power BI, SQL, and Python across consulting and enterprise environments. Most of that time has been client-facing - translating messy, inconsistent data into dashboards people actually open on Monday morning.",
       "Outside of work I'm usually working on personal projects that sit somewhere between data science and machine learning - stuff I find interesting enough to actually finish.",
     ],
   },
