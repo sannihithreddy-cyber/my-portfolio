@@ -9,9 +9,9 @@
     "resumeUrl": "/resume.pdf",
     "contactIntro": "Open to new analytics roles and collaborations. Let's talk data.",
     "paragraphs": [
-      "I'm a data analyst who genuinely loves digging into data — not just building reports but actually figuring out what's going on underneath. Finding a pattern that wasn't obvious, or realizing why a number looks weird, is the part of the job I look forward to.",
-      "I've spent the past 2+ years working in Power BI, SQL, and Python across consulting and enterprise environments. Most of that time has been client-facing — translating messy, inconsistent data into dashboards people actually open on Monday morning.",
-      "Outside of work I'm usually working on personal projects that sit somewhere between data science and machine learning — stuff I find interesting enough to actually finish."
+      "I'm a data analyst who genuinely loves digging into data - not just building reports but actually figuring out what's going on underneath. Finding a pattern that wasn't obvious, or realizing why a number looks weird, is the part of the job I look forward to.",
+      "I've spent the past 2+ years working in Power BI, SQL, and Python across consulting and enterprise environments. Most of that time has been client-facing - translating messy, inconsistent data into dashboards people actually open on Monday morning.",
+      "Outside of work I'm usually working on personal projects that sit somewhere between data science and machine learning - stuff I find interesting enough to actually finish."
     ]
   },
   "location": "Waterloo, ON, Canada",
@@ -66,7 +66,7 @@
     {
       "id": 1,
       "title": "Sector Rotation Analytics Pipeline",
-      "description": "Automated ML pipeline analysing S&P 500 sector behaviour under different macro conditions. Pulls live OHLCV data for 11 sector ETFs plus 3 macro indicators (10Y yield, VIX, Dollar Index), engineers return/volatility/momentum/Sharpe features, applies KMeans clustering with Silhouette validation on rolling monthly windows, and builds a Markov regime-transition matrix — delivered as a 4-page Power BI dashboard with drill-through capability.",
+      "description": "Automated ML pipeline analysing S&P 500 sector behaviour under different macro conditions. Pulls live OHLCV data for 11 sector ETFs plus 3 macro indicators (10Y yield, VIX, Dollar Index), engineers return/volatility/momentum/Sharpe features, applies KMeans clustering with Silhouette validation on rolling monthly windows, and builds a Markov regime-transition matrix - delivered as a 4-page Power BI dashboard with drill-through capability.",
       "image": "/projects/project1.png",
       "tags": ["Python", "pandas", "scikit-learn", "Power BI", "yfinance", "KMeans"],
       "demoUrl": "#",
@@ -96,30 +96,30 @@
   "experience": [
     {
       "id": 1,
-      "company": "BDO Global | BDO Lixar",
+      "company": "BDO",
       "role": "Data Analyst",
       "period": "Apr 2024 – Present",
-      "location": "Canada · Hybrid",
+      "location": "Canada",
       "bullets": [
-        "Took 12+ client reports stuck in legacy Crystal/Jasper formats and rebuilt them as interactive Power BI dashboards — what used to take 3 days now lands in stakeholders' inboxes the same morning.",
-        "Designed a consolidated 3-page dashboard for a mid-market retailer bringing together HR headcount, finance P&L, and operations throughput in one view — the team reclaimed ~6 hours of manual Excel work every week.",
+        "Took 12+ client reports stuck in legacy Crystal/Jasper formats and rebuilt them as interactive Power BI dashboards - what used to take 3 days now lands in stakeholders' inboxes the same morning.",
+        "Designed a consolidated 3-page dashboard for a mid-market retailer bringing together HR headcount, finance P&L, and operations throughput in one view - the team reclaimed ~6 hours of manual Excel work every week.",
         "Rebuilt the underlying data layer using star-schema views with incremental refresh, which cut dashboard load times by roughly 40% without touching the front-end.",
         "Wrote DAX time-intelligence measures (YTD, QTD, rolling averages) so leadership could spot trends on their own instead of waiting for month-end reports.",
-        "Set up three Power Automate flows for weekly report distribution — eliminated the recurring email threads asking 'did you send the numbers?'",
+        "Set up three Power Automate flows for weekly report distribution - eliminated the recurring email threads asking 'did you send the numbers?'",
         "Presented dashboard walkthroughs regularly to business leads with no data background, which taught me that the best visual doesn't need an explanation."
       ]
     },
     {
       "id": 2,
       "company": "Wipro Limited",
-      "role": "Project Engineer — BI & Reporting",
+      "role": "Power BI Analyst",
       "period": "Feb 2023 – Feb 2024",
-      "location": "India · Onsite",
+      "location": "India",
       "bullets": [
         "Owned development and maintenance of 8 dashboards serving 50+ business users across a US telecom client's sales, ops, and network divisions.",
-        "Rewrote core SQL queries using CTEs and window functions to replace deeply nested subqueries — the logic became clean enough that the onshore team could maintain it without digging through documentation.",
+        "Rewrote core SQL queries using CTEs and window functions to replace deeply nested subqueries - the logic became clean enough that the onshore team could maintain it without digging through documentation.",
         "Built Python ETL scripts (pandas, NumPy) to pre-aggregate large transactional datasets upstream so dashboards wouldn't time out during peak hours.",
-        "Reduced dashboard query runtime by ~30% through SQL optimisation and materialised views — significantly cut down on 'it's running slow today' complaints.",
+        "Reduced dashboard query runtime by ~30% through SQL optimisation and materialised views - significantly cut down on 'it's running slow today' complaints.",
         "Delivered weekly KPI digests to senior management via automated email pipelines, replacing a manual copy-paste process that nobody liked doing.",
         "Sat between the client's onshore team and the offshore build team, turning vague business questions into specific metric definitions both sides could agree on."
       ]
@@ -129,14 +129,14 @@
     {
       "id": 1,
       "institution": "Conestoga College",
-      "degree": "Ontario College Graduate Certificate — Big Data Analytics",
+      "degree": "Ontario College Graduate Certificate - Big Data Analytics",
       "period": "2022 – 2024",
       "location": "Waterloo, ON, Canada"
     },
     {
       "id": 2,
       "institution": "Vaagdevi College of Engineering",
-      "degree": "Bachelor of Technology — Computer Science & Engineering",
+      "degree": "Bachelor of Technology - Computer Science & Engineering",
       "period": "2018 – 2022",
       "location": "Warangal, India"
     }
